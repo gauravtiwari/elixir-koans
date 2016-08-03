@@ -52,18 +52,18 @@ defmodule Lists do
   end
 
   koan "Sometimes it's faster to loop around back" do
-    assert List.insert_at([1, 2, 3], -1, 4) == ___
+    assert List.insert_at([1, 2, 3], -1, 4) == [1, 2, 3, 4]
   end
 
   koan "We can also transform ourselves completely" do
-    assert List.to_tuple([1, 2, 3]) == ___
+    assert List.to_tuple([1, 2, 3]) == {1, 2, 3}
   end
 
   koan "Wrapping other values is a handy option" do
-    assert List.wrap("value") == ___
+    assert List.wrap("value") == ["value"]
   end
 
   koan "When there is already a list do not wrap it again" do
-    assert List.wrap(["value"]) == ___
+    assert List.wrap(["value"]) == ["value"]
   end
 end
